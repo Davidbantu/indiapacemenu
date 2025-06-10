@@ -175,7 +175,6 @@
     </div>
   </div>
   <script>
-    // All categories
     const categories = [
       "Salads: 8",
       "Soups: 8",
@@ -205,78 +204,133 @@
       "Wines: 8"
     ];
 
-    // Salad items with actual data
+  // Salad items
     const saladItems = [
-      {
-        name: "Onion Salad",
-        price: "900,00 ֏",
-        desc: "Thin slices of onion",
-        img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80"
-      },
-      {
-        name: "Tomato Cucumber Onion Salad",
-        price: "1 200,00 ֏",
-        desc: "Slices of tomatoes, cucumber, and onions",
-        img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80"
-      },
-      {
-        name: "Green Salad",
-        price: "1 600,00 ֏",
-        desc: "Slices of carrot, cucumber, tomatoes, onions",
-        img: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80"
-      },
-      {
-        name: "Kachumber Salad",
-        price: "1 700,00 ֏",
-        desc: "Onion, carrot, tomato, cucumber, chat masala, lemon juice",
-        img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80"
-      },
-      {
-        name: "India Palace Chef’s Special Salad",
-        price: "1 900,00 ֏",
-        desc: "Chopped onion, carrot, cabbage, cucumber, tomatoes, and Indian spices dressed with mayonnaise, cheese, sweet corn, and salad leaves",
-        img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80"
-      },
-      {
-        name: "Beef Salad",
-        price: "2 400,00 ֏",
-        desc: "Beef fillet with chopped onion, carrot, cabbage, cucumber, tomatoes, and Indian spices",
-        img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80"
-      },
-      {
-        name: "Chicken Tikka Salad",
-        price: "2 900,00 ֏",
-        desc: "Chicken fillet with chopped onion, carrot, cabbage, cucumber, tomatoes, and Indian spices",
-        img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80"
-      },
-      {
-        name: "Crispy Prawn Salad",
-        price: "3 200,00 ֏",
-        desc: "Fried prawns with chopped onion, carrot, cabbage, cucumber, tomatoes, and Indian spices",
-        img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80"
-      }
+      { name: "Onion Salad", price: "900,00 ֏", desc: "Thin slices of onion", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+      { name: "Tomato Cucumber Onion Salad", price: "1 200,00 ֏", desc: "Slices of tomatoes, cucumber, and onions", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" },
+      { name: "Green Salad", price: "1 600,00 ֏", desc: "Slices of carrot, cucumber, tomatoes, onions", img: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" },
+      { name: "Kachumber Salad", price: "1 700,00 ֏", desc: "Onion, carrot, tomato, cucumber, chat masala, lemon juice", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+      { name: "India Palace Chef’s Special Salad", price: "1 900,00 ֏", desc: "Chopped onion, carrot, cabbage, cucumber, tomatoes, and Indian spices dressed with mayonnaise, cheese, sweet corn, and salad leaves", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+      { name: "Beef Salad", price: "2 400,00 ֏", desc: "Beef fillet with chopped onion, carrot, cabbage, cucumber, tomatoes, and Indian spices", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+      { name: "Chicken Tikka Salad", price: "2 900,00 ֏", desc: "Chicken fillet with chopped onion, carrot, cabbage, cucumber, tomatoes, and Indian spices", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+      { name: "Crispy Prawn Salad", price: "3 200,00 ֏", desc: "Fried prawns with chopped onion, carrot, cabbage, cucumber, tomatoes, and Indian spices", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" }
     ];
 
-    // Dummy item for other categories
+    // Soups items
+    const soupItems = [
+      { name: "Mulligatawny Lentil Soup", price: "1,200 ֏", desc: "Mild spiced lentil soup garnished with coriander and rice", img: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" },
+      { name: "Cream of Tomato Soup", price: "1,200 ֏", desc: "Made with fresh tomatoes, cream, and unsalted butter", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" },
+      { name: "Sweet Corn Soup", price: "From 1,400 ֏", desc: "Classic sweet corn soup with vegetables or chicken", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+      { name: "Hot and Sour Soup (Veg)", price: "1,400 ֏", desc: "Carrot, cabbage, beans, onions, soy sauce, and ginger", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+      { name: "Cream of Mushroom Soup", price: "1,500 ֏", desc: "Made with mushrooms, cream, and milk", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+      { name: "Hot and Sour Soup (Chicken)", price: "1,900 ֏", desc: "Chicken with carrot, cabbage, beans, onions, soy sauce, and ginger", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" },
+      { name: "India Palace Seafood Soup", price: "5,900 ֏", desc: "Shrimps, mussels, and squids with vegetables and Indian spices", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+      { name: "Tom Yum Soup", price: "6,000 ֏", desc: "Thai soup cooked with shrimps and Thai spices", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" }
+    ];
+
+    // Vegetable Appetizer items
+    const vegAppetizerItems = [
+      { name: "Hara Bhara Kebab (5 pcs)", price: "2,250 ֏", desc: "Pan-fried patties made with spinach, green peas, potatoes, and Indian spices", img: "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=400&q=80" },
+      { name: "Crispy Cheese Bites (5 pcs)", price: "2,900 ֏", desc: "Cottage cheese balls coated in seasoned batter and deep-fried until golden", img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=80" },
+      { name: "Dahi Kebab (5 pcs)", price: "2,500 ֏", desc: "Soft and flavorful kebabs made with hung curd, cheese, and aromatic Indian spices", img: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" },
+      { name: "Home-Style Potato Fries", price: "900 ֏", desc: "Freshly cut potatoes deep-fried to golden crisp perfection", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+      { name: "Crispy Masala Fries", price: "1,300 ֏", desc: "Spicy Indian-style fries tossed with tangy seasoning and herbs", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" },
+      { name: "Peanut Masala", price: "1,900 ֏", desc: "Roasted peanuts tossed with onions, tomatoes, chilies, and chaat masala", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+      { name: "Cauliflower Lollipop", price: "2,200 ֏", desc: "Crispy fried cauliflower florets in a tangy Indo-Chinese sauce", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+      { name: "Chilli Potatoes", price: "2,500 ֏", desc: "Crispy potatoes stir-fried with spicy Indo-Chinese chilli sauce", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+      { name: "Veg Samosa (2 pcs)", price: "1,000 ֏", desc: "Crispy pastry stuffed with a spiced potato and green pea filling", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" },
+      { name: "Onion Pakora", price: "1,900 ֏", desc: "Thinly sliced onions dipped in seasoned gram flour batter and deep-fried", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+      { name: "Aloo Pakora", price: "1,800 ֏", desc: "Potato slices coated in spiced gram flour batter and deep-fried", img: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" },
+      { name: "Mix Veg Pakora", price: "2,400 ֏", desc: "Assorted vegetable fritters made with a flavorful chickpea flour batter", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+      { name: "Paneer Pakora", price: "2,700 ֏", desc: "Cottage cheese cubes dipped in spiced gram flour batter and deep-fried", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+      { name: "Veg Pakora Platter", price: "7,400 ֏", desc: "An assorted platter of onion, potato, and vegetable pakoras", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" }
+    ];
+
+    // Non-Vegetable Appetizer items
+    const nonVegAppetizerItems = [
+      { name: "Chicken Pakora", price: "2,400 ֏", desc: "Batter-coated chicken fritters, deep-fried to a crispy golden brown.", img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=80" },
+      { name: "Amritsari Fish Pakora", price: "3,500 ֏", desc: "Batter-coated fish fritters with authentic Amritsari spices.", img: "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=400&q=80" },
+      { name: "Chicken Lollipop", price: "2,950 ֏", desc: "Batter-coated and fried chicken winglets, crispy on the outside and juicy inside.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+      { name: "Drums of Heaven", price: "2,600 ֏", desc: "Batter-coated chicken wings, fried and tossed in spicy Schezwan sauce.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+      { name: "India Palace Chicken Tawa Fry", price: "2,750 ֏", desc: "Thinly sliced chicken fillet marinated with spices and grilled on a tawa.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+      { name: "Chicken 65", price: "2,950 ֏", desc: "Deep-fried chicken pieces flavored with aromatic spices and a hint of vinegar.", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" },
+      { name: "India Palace Fish Tawa Fry", price: "3,200 ֏", desc: "Thinly sliced fish marinated with spices and grilled on a tawa.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+      { name: "Non-Veg Pakora Platter", price: "5,400 ֏", desc: "An assorted platter of chicken and fish pakoras.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" }
+    ];
+
+    // Vegetable BBQ
+    const vegBBQItems = [
+      { name: "Veg Seekh Kebab", price: "2,650 ֏", desc: "Mixed vegetables blended with gram flour and aromatic spices, grilled on skewers.", img: "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=400&q=80" },
+      { name: "Paneer Tikka", price: "3,400 ֏", desc: "Marinated cottage cheese cubes grilled with capsicum, onions, and tomatoes.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+      { name: "Malai Paneer Tikka", price: "3,600 ֏", desc: "Cottage cheese marinated in cashew nut paste, cream, spices, and herbs.", img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=80" },
+      { name: "Hariyali Paneer Tikka", price: "3,500 ֏", desc: "Cottage cheese marinated with fresh coriander and mint leaves.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+      { name: "Achari Paneer Tikka", price: "3,700 ֏", desc: "Cottage cheese marinated in tangy pickle spices and barbecued.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+      { name: "India Palace Mixed Grill Veg Platter", price: "7,500 ֏", desc: "A delicious combination of Paneer Tikka, Veg Seekh Kebab, Hara Bhara Kebab, and Tandoori Gobi.", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" }
+    ];
+
+    // Chicken BBQ
+    const chickenBBQItems = [
+      { name: "Chicken Seekh Kebab", price: "2,950 ֏", desc: "Minced chicken mixed with special spices and barbecued on skewers.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+      { name: "Tandoori Chicken", price: "From 2,950 ֏", desc: "Whole chicken marinated in yogurt and Indian spices, roasted in a tandoor.", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" },
+      { name: "Chicken Tikka", price: "3,250 ֏", desc: "Tender chicken cubes marinated in yogurt and Indian spices, grilled to perfection.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+      { name: "Chicken Malai Tikka", price: "3,450 ֏", desc: "Chicken kebabs marinated in creamy yogurt and spices.", img: "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=400&q=80" },
+      { name: "Hariyali Chicken Tikka", price: "3,150 ֏", desc: "Chicken cubes marinated with mint, coriander, curd, and aromatic spices.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+      { name: "Tangdi Kebab", price: "3,500 ֏", desc: "Tandoori-style marinated chicken drumsticks, grilled for smoky flavor.", img: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" },
+      { name: "Tandoori Chicken Wings", price: "3,200 ֏", desc: "Juicy chicken wings marinated in tandoori spices and grilled.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" }
+    ];
+
+    // Lamb BBQ
+    const lambBBQItems = [
+      { name: "Lamb Seekh Kebab", price: "3,250 ֏", desc: "Marinated minced lamb meat, skewered and grilled to perfection.", img: "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=400&q=80" },
+      { name: "Galouti Kebab", price: "3,650 ֏", desc: "Tender minced lamb kebabs, delicately spiced and pan-fried until juicy.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+      { name: "Tandoori Lamb Boti Kebab", price: "3,450 ֏", desc: "Chunks of lamb marinated in spices and yogurt, grilled in the tandoor for smoky flavor.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" }
+    ];
+
+    // Beef BBQ
+    const beefBBQItems = [
+      { name: "Beef Seekh Kebab", price: "3,250 ֏", desc: "Marinated minced beef, skewered and barbecued for rich flavor.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+      { name: "Tandoori Boti Beef Kebab", price: "2,950 ֏", desc: "Tender beef cubes marinated in tandoori spices and grilled to perfection.", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" }
+    ];
+
+    // Dal (lentil dishes)
+    const dalItems = [
+      { name: "Yellow Dal Tadka", price: "2,850 ֏", desc: "Yellow lentils cooked and tempered with ghee-fried spices and fresh herbs.", img: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" },
+      { name: "Dal Palak", price: "2,950 ֏", desc: "Yellow lentils slow-cooked with fresh spinach and aromatic spices.", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" },
+      { name: "Dal Makhani", price: "3,350 ֏", desc: "Creamy black lentils simmered with butter and fresh cream for a rich taste.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+      { name: "Chana Masala", price: "2,950 ֏", desc: "Chickpeas cooked in a spicy gravy with green chilies, onions, garlic, and tomatoes.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+      { name: "Rajma Curry", price: "2,950 ֏", desc: "Red kidney beans slow-cooked in a flavorful tomato-based gravy.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+      { name: "Sambhar", price: "3,250 ֏", desc: "South Indian lentil and vegetable stew flavored with tamarind and spices.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" }
+    ];
+
+    // Egg dishes
+    const eggItems = [
+      { name: "Egg Roast", price: "2,900 ֏", desc: "Boiled eggs sautéed in a spiced onion and tomato gravy.", img: "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=400&q=80" },
+      { name: "Egg Curry", price: "2,750 ֏", desc: "Boiled eggs cooked in a flavorful curry with potatoes and spices.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+      { name: "Egg Omelette / Bhurji", price: "2,450 ֏", desc: "Fluffy egg omelette or scrambled eggs cooked with onions and spices.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" }
+    ];
+    // Vegetarian curries (main course) items
+    const vegCurriesItems = [
+      { name: "Aloo Jeera", price: "2,500 ֏", desc: "Potatoes cooked with fragrant cumin seeds and mild spices.", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" },
+      { name: "Aloo Palak", price: "2,600 ֏", desc: "Potatoes simmered with fresh spinach and aromatic spices.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+      { name: "Aloo Mutter", price: "2,750 ֏", desc: "Classic dish of potatoes cooked with green peas in a spiced gravy.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+      { name: "Mix Veg Curry", price: "2,900 ֏", desc: "Assorted fresh vegetables cooked in a flavorful Indian spice blend.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+      { name: "Veg Jalfrezi", price: "2,950 ֏", desc: "Mixed vegetables sautéed with onions, peppers, and tangy spices.", img: "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=400&q=80" },
+      { name: "India Palace Special Navratan Korma", price: "3,800 ֏", desc: "A rich, creamy curry with cashew nuts, carrots, cauliflower, beans, potatoes, peas, cottage cheese, and mushrooms.", img: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" },
+      { name: "Mushroom Matar Masala", price: "2,950 ֏", desc: "Semi-dry dish of mushrooms and green peas cooked in a mildly spiced gravy.", img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=80" },
+      { name: "Chilli Paneer (Dry / Gravy)", price: "3,250 ֏", desc: "Cottage cheese cooked in a balanced sweet, sour, and spicy sauce.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+      { name: "Gobi Manchurian (Dry / Gravy)", price: "3,150 ֏", desc: "Cauliflower and cheese fritters stir-fried with ginger, garlic, and Indo-Chinese sauce.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+      { name: "Mix Veg Manchurian (Dry / Gravy)", price: "3,250 ֏", desc: "Mixed vegetable and cheese fritters cooked in a flavorful Indo-Chinese sauce.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+      { name: "Malai Kofta", price: "3,500 ֏", desc: "Soft cheese balls cooked in a rich, creamy, and slightly sweet onion-tomato gravy.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+      { name: "Navratan Korma", price: "3,800 ֏", desc: "A royal mix of nine vegetables and nuts cooked in a creamy, mildly spiced gravy.", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" }
+    ];
+
+    // ... [other category item arrays below remain unchanged] ...
+
+    // Sample for all other categories
     const sampleItems = [
-      {
-        name: "Sample Dish",
-        desc: "A delicious sample prepared with authentic spices and fresh ingredients.",
-        price: "$12.00",
-        img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80"
-      },
-      {
-        name: "Tasty Delight",
-        desc: "Savory, aromatic, and perfectly cooked for your delight.",
-        price: "$10.50",
-        img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80"
-      },
-      {
-        name: "Chef's Special",
-        desc: "A chef's signature menu item that will tickle your taste buds.",
-        price: "$14.20",
-        img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80"
-      }
+      { name: "Sample Dish", desc: "A delicious sample prepared with authentic spices and fresh ingredients.", price: "$12.00", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+      { name: "Tasty Delight", desc: "Savory, aromatic, and perfectly cooked for your delight.", price: "$10.50", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+      { name: "Chef's Special", desc: "A chef's signature menu item that will tickle your taste buds.", price: "$14.20", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" }
     ];
 
     const catListDiv = document.getElementById('cat-list');
@@ -284,7 +338,6 @@
     const catSwiper = document.getElementById('cat-swiper');
     const leftBtn = document.getElementById('cat-left');
     const rightBtn = document.getElementById('cat-right');
-    // Auto-select "Salads" as default
     let currentCatIdx = categories.findIndex(c => c.startsWith("Salads"));
 
     function renderCategories() {
@@ -302,9 +355,29 @@
     function renderItems() {
       itemsRowDiv.innerHTML = '';
       let items;
-      // Show real salad items if "Salads" is selected
-      if(currentCatIdx === categories.findIndex(c => c.startsWith("Salads"))) {
+      const catName = categories[currentCatIdx].split(':')[0].trim().replace('‑','-');
+      if (catName === "Salads") {
         items = saladItems;
+      } else if (catName === "Soups") {
+        items = soupItems;
+      } else if (catName === "Vegetable Appetizers") {
+        items = vegAppetizerItems;
+      } else if (catName === "Non-Vegetable Appetizers" || catName === "Non-Vegetarian Appetizers") {
+        items = nonVegAppetizerItems;
+      } else if (catName === "Vegetable BBQ") {
+        items = vegBBQItems;
+      } else if (catName === "Chicken BBQ") {
+        items = chickenBBQItems;
+      } else if (catName === "Lamb BBQ") {
+        items = lambBBQItems;
+      } else if (catName === "Beef BBQ") {
+        items = beefBBQItems;
+      } else if (catName === "Dal (lentil dishes)") {
+        items = dalItems;
+      } else if (catName === "Egg dishes") {
+        items = eggItems;
+      } else if (catName === "Vegetarian curries (main course)") {
+        items = vegCurriesItems;
       } else {
         items = sampleItems;
       }
@@ -360,12 +433,10 @@
     catSwiper.addEventListener('scroll', updateArrows);
     window.addEventListener('resize', updateArrows);
 
-    // Initial render
     renderCategories();
     renderItems();
     setTimeout(() => {
       updateArrows();
-      // Auto-scroll to the selected category on load
       const btns = catListDiv.querySelectorAll('.cat-item');
       if (btns[currentCatIdx]) {
         btns[currentCatIdx].scrollIntoView({behavior: 'smooth', inline: 'center', block: 'nearest'});
