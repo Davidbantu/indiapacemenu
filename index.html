@@ -178,7 +178,7 @@
     const categories = [
       "Salads: 8",
       "Soups: 8",
-      "Vegetable Appetizers: 13",
+      "Vegetable Appetizers: 14",
       "Non‑Vegetable Appetizers: 8",
       "Vegetable BBQ: 6",
       "Chicken BBQ: 7",
@@ -325,12 +325,193 @@ const vegetarianCurriesItems = [
   { name: "Malai Kofta", price: "3,500 ֏", desc: "Soft cheese balls cooked in a rich, creamy, and slightly sweet onion-tomato gravy.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
   { name: "Navratan Korma", price: "3,800 ֏", desc: "A royal mix of nine vegetables and nuts cooked in a creamy, mildly spiced gravy.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" }
 ];
-    // Sample for all other categories
-    const sampleItems = [
-      { name: "Sample Dish", desc: "A delicious sample prepared with authentic spices and fresh ingredients.", price: "$12.00", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
-      { name: "Tasty Delight", desc: "Savory, aromatic, and perfectly cooked for your delight.", price: "$10.50", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
-      { name: "Chef's Special", desc: "A chef's signature menu item that will tickle your taste buds.", price: "$14.20", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" }
-    ];
+    
+    // Paneer dishes
+const paneerDishesItems = [
+  { name: "Paneer Butter Masala", price: "3,350 ֏", desc: "Paneer cubes cooked in a rich, spicy gravy made from onions, tomatoes, and Kashmiri chili.", img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=80" },
+  { name: "Shahi Paneer", price: "3,250 ֏", desc: "Paneer cooked in a creamy, mildly spiced gravy made with onions, nuts, and curd.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+  { name: "Mutter Paneer", price: "3,350 ֏", desc: "Cottage cheese and green peas cooked in a flavorful tomato gravy.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Palak Paneer", price: "3,150 ֏", desc: "Paneer cooked in a smooth, spiced spinach gravy.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+  { name: "Kadai Paneer", price: "3,450 ֏", desc: "Paneer cooked in a spicy gravy with onions, tomatoes, and capsicum.", img: "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=400&q=80" },
+  { name: "Paneer Tikka Masala", price: "3,450 ֏", desc: "Grilled paneer cubes cooked in a rich, tangy tikka masala gravy.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" }
+];
+
+// Seafood dishes
+const seafoodDishesItems = [
+  { name: "Dynamite Shrimps", price: "4,800 ֏", desc: "Crispy fried shrimps sautéed with mayo, sweet chili, and vinegar.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+  { name: "Golden Honey Sesame Prawns", price: "4,500 ֏", desc: "Batter-fried prawns tossed in honey and sesame seeds.", img: "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=400&q=80" },
+  { name: "Goan Fish Curry", price: "3,500 ֏", desc: "Tangy and spicy fish curry prepared in traditional Goan style.", img: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" },
+  { name: "Crispy Chilli Fish", price: "3,900 ֏", desc: "Fried fish stir-fried with spicy chili sauce.", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Fish Masala", price: "3,600 ֏", desc: "Fish cooked in a thick and flavorful masala gravy.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Malabar Fish Curry", price: "3,700 ֏", desc: "Fish simmered in creamy coconut milk with spices, Malabar style.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+  { name: "Kerala Fish Molee", price: "3,800 ֏", desc: "Fish cooked gently in coconut milk with Kerala-style spices.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+  { name: "Prawn Masala", price: "5,450 ֏", desc: "Prawns cooked in a thick and spicy masala gravy.", img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=80" },
+  { name: "Chilli Prawns", price: "6,500 ֏", desc: "Prawns stir-fried in a spicy chili sauce.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Kerala Prawn Roast", price: "6,500 ֏", desc: "Prawns roasted in a spicy tomato and onion gravy, Kerala style.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+  { name: "Prawns Curry", price: "4,900 ֏", desc: "Classic prawn curry cooked with aromatic spices.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+  { name: "India Palace Fish Tawa Fry", price: "3,200 ֏", desc: "Thinly sliced fish marinated and grilled on a tawa (griddle).", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" }
+];
+    
+    // Seafood BBQ
+const seafoodBBQItems = [
+  { name: "Grilled Fish", price: "4,900 ֏", desc: "Whole Armenian trout marinated with special spices and grilled to perfection.", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Tandoori Salmon", price: "6,900 ֏", desc: "Salmon marinated in a blend of special spices and barbecued in tandoor style.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+  { name: "Tandoori Tiger Prawns", price: "4,950 ֏", desc: "Tiger prawns marinated with tandoori masala and expertly grilled.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+  { name: "India Palace Seafood Mix Grill", price: "28,000 ֏", desc: "A grand platter featuring salmon tikka, tandoori prawns, squid, and mussels.", img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=80" },
+  { name: "Fish Tikka", price: "3,750 ֏", desc: "Tender fish pieces marinated in spices and grilled on skewers.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" }
+];
+    // India Fusion Chicken Dishes
+const indiaFusionChickenDishesItems = [
+  { name: "Honey Glazed Chicken", price: "3,750 ֏", desc: "", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+  { name: "Kung Pao Chicken", price: "3,550 ֏", desc: "", img: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" }
+];
+
+// Chicken dishes
+const chickenDishesItems = [
+  { name: "Chicken Dopyaza", price: "2,950 ֏", desc: "Chicken cooked with caramelized onions and topped with fried onions.", img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=80" },
+  { name: "Chicken Vindaloo", price: "2,950 ֏", desc: "Spicy and tangy chicken curry cooked with vinegar and potatoes.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+  { name: "Chicken Korma", price: "3,650 ֏", desc: "Chicken simmered in a mild and creamy cashew nut-based gravy.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Chilli Chicken (Dry / Gravy)", price: "3,450 ֏", desc: "Chicken cooked in a spicy, tangy chili sauce, available dry or with gravy.", img: "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=400&q=80" },
+  { name: "Chicken Kali Mirch", price: "3,450 ֏", desc: "Chicken cooked with black pepper for a bold and peppery flavor.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+  { name: "Chicken Saagwala", price: "3,400 ֏", desc: "Chicken cooked in a smooth, spiced spinach gravy.", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Chicken Curry", price: "2,900 ֏", desc: "Classic chicken curry cooked in a rich and aromatic sauce.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+  { name: "Methi Chicken", price: "3,250 ֏", desc: "Chicken cooked with fresh fenugreek leaves for a distinctive flavor.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Kadai Chicken", price: "3,450 ֏", desc: "Chicken cooked with capsicum and onions in a traditional kadai gravy.", img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=80" },
+  { name: "Butter Chicken", price: "3,550 ֏", desc: "Barbecued chicken pieces cooked in a creamy, spiced tomato sauce.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+  { name: "Chicken Tikka Masala", price: "3,450 ֏", desc: "Grilled chicken marinated in yogurt, cooked in a rich tomato cream sauce.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+  { name: "Kerala Chicken Roast", price: "3,300 ֏", desc: "Chicken roasted and cooked in a spicy tomato and onion gravy, Kerala style.", img: "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=400&q=80" },
+  { name: "Malabar Chicken Curry", price: "3,500 ֏", desc: "Chicken cooked in the traditional Malabar Kerala style with coconut flavors.", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Mughlai Chicken", price: "3,750 ֏", desc: "Chicken cooked in rich Mughlai style with nuts and aromatic spices.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Chicken Manchurian (Dry / Gravy)", price: "3,250 ֏", desc: "Batter-coated fried chicken cooked in a flavorful Manchurian sauce.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" }
+];
+
+// Lamb dishes
+const lambDishesItems = [
+  { name: "Lamb Vindaloo", price: "3,400 ֏", desc: "Tender lamb cooked with potatoes in a spicy, tangy vindaloo sauce.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+  { name: "Lamb Curry", price: "3,450 ֏", desc: "Lamb cooked in a traditional aromatic curry sauce.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+  { name: "Lamb Saagwala", price: "3,550 ֏", desc: "Lamb cooked in a rich and creamy spinach gravy.", img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=80" },
+  { name: "Kadai Lamb", price: "3,600 ֏", desc: "Lamb cooked with capsicum and onions in a spicy kadai gravy.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Spicy Bhuna Lamb", price: "3,900 ֏", desc: "Lamb cooked in the classic bhuna style with thick, spicy gravy.", img: "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=400&q=80" },
+  { name: "Lamb Korma", price: "3,600 ֏", desc: "Lamb simmered in a creamy white gravy made from cashew nuts.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+  { name: "Lamb Rogan Josh", price: "3,750 ֏", desc: "Lamb cooked with yogurt and warm, aromatic spices in traditional style.", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Lamb Tawa Roast", price: "3,950 ֏", desc: "Lamb roasted on a tawa with a spicy onion and tomato mixture.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+  { name: "Lamb Keema Matar", price: "3,650 ֏", desc: "Minced lamb cooked with green peas and spices in a flavorful gravy.", img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=80" }
+];
+    
+    // Beef dishes
+const beefDishesItems = [
+  { name: "Beef Curry", price: "3,450 ֏", desc: "Tender beef cooked in a rich and aromatic curry sauce.", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Beef Manchurian (Dry / Gravy)", price: "3,850 ֏", desc: "Batter-coated beef fried and cooked in a flavorful Manchurian sauce.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+  { name: "Beef with Vegetables", price: "3,950 ֏", desc: "Beef cooked with mixed vegetables in a savory curry sauce.", img: "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=400&q=80" },
+  { name: "Chilli Beef (Dry / Gravy)", price: "4,250 ֏", desc: "Beef cooked in a spicy and tangy chili sauce, available dry or with gravy.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+  { name: "Spicy Bhuna Beef", price: "4,250 ֏", desc: "Beef cooked in the traditional bhuna style with thick, spicy gravy.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Beef Pepper Fry", price: "4,550 ֏", desc: "Beef cooked with a robust black pepper mixture and roasted to a dark brown color.", img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=80" },
+  { name: "Beef Tawa Roast", price: "4,650 ֏", desc: "Beef roasted on a tawa with an onion and tomato mixture.", img: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" }
+];
+
+// Biryani varieties
+const biryaniVarietiesItems = [
+  { name: "Biryani Rice", price: "2,250 ֏", desc: "Fragrant basmati rice steamed with whole spices, saffron, mint, herbs, yogurt, and butter.", img: "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=400&q=80" },
+  { name: "Vegetable Biryani", price: "2,750 ֏", desc: "Basmati rice steamed and flavored with mixed vegetables, whole spices, saffron, mint, herbs, yogurt, and butter.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+  { name: "Chicken Biryani", price: "3,250 ֏", desc: "Basmati rice steamed with chicken, whole spices, saffron, mint, herbs, yogurt, and butter.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Lamb Biryani", price: "3,450 ֏", desc: "Basmati rice steamed with tender lamb, whole spices, saffron, mint, herbs, yogurt, and butter.", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Beef Biryani", price: "3,750 ֏", desc: "Basmati rice steamed with flavorful beef, whole spices, saffron, mint, herbs, yogurt, and butter.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+  { name: "Fish Biryani", price: "3,950 ֏", desc: "Basmati rice steamed with fish, whole spices, saffron, mint, herbs, yogurt, and butter.", img: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" },
+  { name: "Chicken Tikka Biryani", price: "3,850 ֏", desc: "Kerala/Hyderabadi style biryani with chicken breast pieces, whole spices, saffron, mint, herbs, yogurt, and butter.", img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=80" },
+  { name: "Shrimp Biryani", price: "5,500 ֏", desc: "Basmati rice steamed with shrimp, whole spices, saffron, mint, herbs, yogurt, and butter.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+  { name: "Egg Biryani", price: "2,700 ֏", desc: "Basmati rice cooked with boiled eggs and aromatic spices.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Lamb Keema Biryani", price: "3,500 ֏", desc: "Basmati rice cooked with minced lamb and traditional biryani spices.", img: "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=400&q=80" },
+  { name: "Hyderabadi Dum Biryani", price: "From 3,250 ֏", desc: "Classic Hyderabadi style slow-cooked biryani with layered meat and rice.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" }
+];
+
+// Rice dishes
+const riceDishesItems = [
+  { name: "Steamed Basmati Rice", price: "1,200 ֏", desc: "Steamed long-grain Indian basmati rice.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+  { name: "Jeera Rice", price: "1,500 ֏", desc: "Basmati rice cooked with fragrant cumin seeds.", img: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" },
+  { name: "Peas Pulao", price: "1,800 ֏", desc: "Basmati rice cooked with fresh green peas and mild spices.", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Curd Rice", price: "1,700 ֏", desc: "Soft cooked rice mixed with yogurt and tempered with spices.", img: "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=400&q=80" },
+  { name: "Mix Veg Pulao", price: "1,800 ֏", desc: "Basmati rice cooked with assorted vegetables and aromatic spices.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Kashmiri Pulao", price: "3,200 ֏", desc: "Rice cooked with fruit cocktail, saffron, and loaded with dry fruits and nuts.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+  { name: "Ghee Rice", price: "2,100 ֏", desc: "Rice cooked with clarified butter (ghee), raisins, and cashew nuts.", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" }
+];
+    // Fried rice
+const friedRiceItems = [
+  { name: "Egg Fried Rice", price: "1,950 ֏", desc: "Rice stir-fried with vegetables and scrambled eggs.", img: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" },
+  { name: "Veg Fried Rice", price: "2,250 ֏", desc: "Rice stir-fried with a mix of fresh vegetables.", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Chicken Fried Rice", price: "2,500 ֏", desc: "Rice stir-fried with vegetables, eggs, and tender chicken pieces.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+  { name: "Thai Seafood Fried Rice", price: "3,100 ֏", desc: "Rice stir-fried with shrimp, mussels, squid, and fish in authentic Thai sauce.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+  { name: "India Palace Mixed Fried Rice", price: "3,950 ֏", desc: "Rice stir-fried with vegetables, eggs, chicken, and shrimp.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+  { name: "Shrimp Fried Rice", price: "4,500 ֏", desc: "Rice stir-fried with fresh shrimp and vegetables.", img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=80" }
+];
+
+// Indian breads
+const indianBreadsItems = [
+  { name: "Fulka", price: "350 ֏", desc: "Thin unleavened wheat flour bread cooked on a tawa.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+  { name: "Tandoori Roti (Plain)", price: "450 ֏", desc: "Crispy unleavened wheat flour bread cooked in tandoor.", img: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" },
+  { name: "Tandoori Roti Butter", price: "500 ֏", desc: "Tandoori roti brushed with melted butter.", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Tandoori Naan (Plain)", price: "450 ֏", desc: "Soft leavened white flour bread baked in tandoor.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+  { name: "Tandoori Naan Butter", price: "500 ֏", desc: "Soft naan bread brushed with butter.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Garlic Naan", price: "600 ֏", desc: "Leavened white flour bread flavored with garlic and butter.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+  { name: "Mint Paratha", price: "600 ֏", desc: "Flaky whole wheat bread with fresh mint, spinach, and coriander.", img: "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=400&q=80" },
+  { name: "Lacha Paratha", price: "750 ֏", desc: "Layered unleavened wheat flour flatbread with a flaky texture.", img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=80" },
+  { name: "Aloo Paratha", price: "950 ֏", desc: "Wheat flour bread stuffed with spiced mashed potatoes.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Onion Potato Kulcha", price: "600 ֏", desc: "Leavened white flour bread stuffed with onions and potatoes.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+  { name: "Onion Kulcha", price: "800 ֏", desc: "Leavened white flour bread stuffed with spiced onions.", img: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" },
+  { name: "Mix Veg Kulcha", price: "900 ֏", desc: "Leavened white flour bread stuffed with mixed vegetables.", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Paneer Paratha", price: "1,000 ֏", desc: "Wheat flour bread stuffed with Indian cottage cheese.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+  { name: "Keema Paratha", price: "1,450 ֏", desc: "Wheat flour bread stuffed with spiced minced meat.", img: "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=400&q=80" },
+  { name: "Plain Tawa Paratha", price: "450 ֏", desc: "Flaky, pan-cooked unleavened wheat bread.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Fluffy Naan", price: "500 ֏", desc: "Soft, airy naan bread baked in the tandoor.", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" }
+];
+
+// Accompaniments
+const accompanimentsItems = [
+  { name: "Chutney Sauce", price: "350 ֏", desc: "Tangy and spicy dipping sauce.", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Lemon", price: "300 ֏", desc: "Fresh lemon wedges.", img: "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=400&q=80" },
+  { name: "Onion Raita", price: "850 ֏", desc: "Yogurt mixed with fresh onions.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+  { name: "Pickle", price: "600 ֏", desc: "Mixed vegetables preserved in vinegar and Indian spices.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Plain Curd", price: "300 ֏", desc: "Fresh plain yogurt.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+  { name: "Cucumber Raita", price: "1,050 ֏", desc: "Yogurt mixed with fresh cucumber.", img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=80" },
+  { name: "Mix Raita", price: "950 ֏", desc: "Yogurt mixed with assorted vegetables.", img: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" },
+  { name: "Mint Coriander Raita", price: "700 ֏", desc: "Yogurt mixed with fresh mint and coriander.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+  { name: "Plain Papad", price: "350 ֏", desc: "Crispy spicy Indian crackers.", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Masala Papad", price: "800 ֏", desc: "Papad topped with onions, tomatoes, cucumber, and chat masala.", img: "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=400&q=80" }
+];
+    
+    // Desserts
+const dessertsItems = [
+  { name: "Carrot Halwa", price: "1,450 ֏", desc: "Indian pudding made with fresh carrots, milk, sugar, ghee, and nuts.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+  { name: "Gulab Jamun (1 piece)", price: "500 ֏", desc: "Soft cottage cheese dumpling cooked in honey sauce flavored with saffron and cardamom.", img: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" }
+];
+
+// Drinks (non-alcoholic)
+const drinksItems = [
+  { name: "Masala Tea", price: "1,000 ֏", desc: "Traditional Indian spiced tea.", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Ginger Milk Tea", price: "1,000 ֏", desc: "Milk tea infused with fresh ginger.", img: "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=400&q=80" },
+  { name: "Cardamom Milk Tea", price: "1,200 ֏", desc: "Milk tea flavored with aromatic cardamom.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+  { name: "Water (500 ml)", price: "500 ֏", desc: "", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Gas Water (500 ml)", price: "500 ֏", desc: "", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+  { name: "Pepsi (500 ml)", price: "500 ֏", desc: "", img: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" },
+  { name: "Mirinda (500 ml)", price: "500 ֏", desc: "", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Lemonade", price: "1,500 ֏", desc: "", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+  { name: "Mango Lassi", price: "750 ֏", desc: "Sweet mango yogurt drink.", img: "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=400&q=80" },
+  { name: "Salt Lassi", price: "650 ֏", desc: "Savory salted yogurt drink.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Sweet Lassi", price: "650 ֏", desc: "Sweet yogurt drink.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+  { name: "Masala Lassi", price: "650 ֏", desc: "Spiced yogurt drink.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" }
+];
+
+// Wines
+const winesItems = [
+  { name: "Armenia White (Dry/Semi-Sweet)", price: "3,500 ֏", desc: "", img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=80" },
+  { name: "Armenia Red (Dry/Semi-Sweet)", price: "3,500 ֏", desc: "", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+  { name: "Takar Red (Dry)", price: "8,500 ֏", desc: "", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Takar White (Dry)", price: "6,000 ֏", desc: "", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+  { name: "Karas White", price: "7,000 ֏", desc: "", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+  { name: "Karas Red", price: "8,500 ֏", desc: "", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" },
+  { name: "Takar Rosé (Dry)", price: "7,000 ֏", desc: "", img: "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=400&q=80" },
+  { name: "Yerevan Red (Dry/Semi-Sweet)", price: "5,500 ֏", desc: "", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" }
+];
+ 
 
     const catListDiv = document.getElementById('cat-list');
     const itemsRowDiv = document.getElementById('items-row');
@@ -377,10 +558,39 @@ const vegetarianCurriesItems = [
         items = eggItems;
       } else if (catName === "Vegetarian curries (main course)") {
   items = vegetarianCurriesItems;
+} else if (catName === "Paneer dishes") {
+  items = paneerDishesItems;
+} else if (catName === "Seafood dishes") {
+  items = seafoodDishesItems;
 }
-      else {
-        items = sampleItems;
-      }
+      else if (catName === "Seafood BBQ") {
+  items = seafoodBBQItems;
+} else if (catName === "Chicken dishes") {
+  items = chickenDishesItems;
+} else if (catName === "Lamb dishes") {
+  items = lambDishesItems;
+} else if (catName === "Beef dishes") {
+  items = beefDishesItems;
+} else if (catName === "Biryani varieties") {
+  items = biryaniVarietiesItems;
+} else if (catName === "Rice dishes") {
+  items = riceDishesItems;
+} else if (catName === "Fried rice") {
+  items = friedRiceItems;
+} else if (catName === "Indian breads") {
+  items = indianBreadsItems;
+} else if (catName === "Accompaniments") {
+  items = accompanimentsItems;
+} else if (catName === "Desserts") {
+  items = dessertsItems;
+} else if (catName === "Drinks (non-alcoholic)") {
+  items = drinksItems;
+} else if (catName === "Wines") {
+  items = winesItems;
+} else if (catName === "India Fusion Chicken Dishes") {
+  items = indiaFusionChickenDishesItems;
+}
+     
       items.forEach(item => {
         const card = document.createElement('div');
         card.className = 'item-card';
