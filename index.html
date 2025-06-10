@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -325,6 +327,49 @@
     ];
 
     // ... [other category item arrays below remain unchanged] ...
+    // Vegetarian curries (main course) items
+    const vegCurriesItems = [
+      { name: "Aloo Jeera", price: "2,500 ֏", desc: "Potatoes cooked with fragrant cumin seeds and mild spices.", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" },
+      { name: "Aloo Palak", price: "2,600 ֏", desc: "Potatoes simmered with fresh spinach and aromatic spices.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+      { name: "Aloo Mutter", price: "2,750 ֏", desc: "Classic dish of potatoes cooked with green peas in a spiced gravy.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+      { name: "Mix Veg Curry", price: "2,900 ֏", desc: "Assorted fresh vegetables cooked in a flavorful Indian spice blend.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+      { name: "Veg Jalfrezi", price: "2,950 ֏", desc: "Mixed vegetables sautéed with onions, peppers, and tangy spices.", img: "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=400&q=80" },
+      { name: "India Palace Special Navratan Korma", price: "3,800 ֏", desc: "A rich, creamy curry with cashew nuts, carrots, cauliflower, beans, potatoes, peas, cottage cheese, and mushrooms.", img: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" },
+      { name: "Mushroom Matar Masala", price: "2,950 ֏", desc: "Semi-dry dish of mushrooms and green peas cooked in a mildly spiced gravy.", img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=80" },
+      { name: "Chilli Paneer (Dry / Gravy)", price: "3,250 ֏", desc: "Cottage cheese cooked in a balanced sweet, sour, and spicy sauce.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+      { name: "Gobi Manchurian (Dry / Gravy)", price: "3,150 ֏", desc: "Cauliflower and cheese fritters stir-fried with ginger, garlic, and Indo-Chinese sauce.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+      { name: "Mix Veg Manchurian (Dry / Gravy)", price: "3,250 ֏", desc: "Mixed vegetable and cheese fritters cooked in a flavorful Indo-Chinese sauce.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+      { name: "Malai Kofta", price: "3,500 ֏", desc: "Soft cheese balls cooked in a rich, creamy, and slightly sweet onion-tomato gravy.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+      { name: "Navratan Korma", price: "3,800 ֏", desc: "A royal mix of nine vegetables and nuts cooked in a creamy, mildly spiced gravy.", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" }
+    ];
+
+    // Paneer dishes
+    const paneerItems = [
+      { name: "Paneer Butter Masala", price: "3,350 ֏", desc: "Paneer cubes cooked in a rich, spicy gravy made from onions, tomatoes, and Kashmiri chili.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+      { name: "Shahi Paneer", price: "3,250 ֏", desc: "Paneer cooked in a creamy, mildly spiced gravy made with onions, nuts, and curd.", img: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" },
+      { name: "Mutter Paneer", price: "3,350 ֏", desc: "Cottage cheese and green peas cooked in a flavorful tomato gravy.", img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=80" },
+      { name: "Palak Paneer", price: "3,150 ֏", desc: "Paneer cooked in a smooth, spiced spinach gravy.", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" },
+      { name: "Kadai Paneer", price: "3,450 ֏", desc: "Paneer cooked in a spicy gravy with onions, tomatoes, and capsicum.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+      { name: "Paneer Tikka Masala", price: "3,450 ֏", desc: "Grilled paneer cubes cooked in a rich, tangy tikka masala gravy.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" }
+    ];
+
+    // Seafood dishes
+    const seafoodItems = [
+      { name: "Dynamite Shrimps", price: "4,800 ֏", desc: "Crispy fried shrimps sautéed with mayo, sweet chili, and vinegar.", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" },
+      { name: "Golden Honey Sesame Prawns", price: "4,500 ֏", desc: "Batter-fried prawns tossed in honey and sesame seeds.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+      { name: "Goan Fish Curry", price: "3,500 ֏", desc: "Tangy and spicy fish curry prepared in traditional Goan style.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+      { name: "Crispy Chilli Fish", price: "3,900 ֏", desc: "Fried fish stir-fried with spicy chili sauce.", img: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" },
+      { name: "Fish Masala", price: "3,600 ֏", desc: "Fish cooked in a thick and flavorful masala gravy.", img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=80" },
+      { name: "Malabar Fish Curry", price: "3,700 ֏", desc: "Fish simmered in creamy coconut milk with spices, Malabar style.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+      { name: "Kerala Fish Molee", price: "3,800 ֏", desc: "Fish cooked gently in coconut milk with Kerala-style spices.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+      { name: "Prawn Masala", price: "5,450 ֏", desc: "Prawns cooked in a thick and spicy masala gravy.", img: "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=400&q=80" },
+      { name: "Chilli Prawns", price: "6,500 ֏", desc: "Prawns stir-fried in a spicy chili sauce.", img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" },
+      { name: "Kerala Prawn Roast", price: "6,500 ֏", desc: "Prawns roasted in a spicy tomato and onion gravy, Kerala style.", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
+      { name: "Prawns Curry", price: "4,900 ֏", desc: "Classic prawn curry cooked with aromatic spices.", img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80" },
+      { name: "India Palace Fish Tawa Fry", price: "3,200 ֏", desc: "Thinly sliced fish marinated and grilled on a tawa (griddle).", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" }
+    ];
+
+    // [other category item arrays below remain unchanged]
 
     // Sample for all other categories
     const sampleItems = [
@@ -378,6 +423,10 @@
         items = eggItems;
       } else if (catName === "Vegetarian curries (main course)") {
         items = vegCurriesItems;
+      } else if (catName === "Paneer dishes") {
+        items = paneerItems;
+      } else if (catName === "Seafood dishes") {
+        items = seafoodItems;
       } else {
         items = sampleItems;
       }
