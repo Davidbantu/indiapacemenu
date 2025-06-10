@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Full Menu Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --cat-height: 60px;
+      --gap: 16px;
+      --item-img-h: 120px;
+      --color-bg: #fff;
+      --color-primary: #333;
+      --color-secondary: #666;
+      --color-accent: #e0e0e0;
+      --color-highlight: #ec922a;
+      --radius: 14px;
+      --shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--color-bg);
+      color: var(--color-primary);
+    }
+    .menu-container {
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: var(--gap);
+    }
+    .cat-swiper-wrapper {
+      display: flex;
+      align-items: center;
+      margin-bottom: var(--gap);
+      position: relative;
+      height: var(--cat-height);
+    }
+    .cat-arrow {
+      background: var(--color-bg);
+      border: none;
+      font-size: 1.7em;
+      color: var(--color-secondary);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 3;
+      transition: background 0.2s;
+    }
+    .cat-arrow:active { background: #f8f8f8; }
+    .cat-arrow[disabled] { opacity: 0.3; cursor: default; }
+    .cat-swiper {
+      overflow-x: auto;
+      flex: 1;
+      padding: 0 8px;
+      scroll-behavior: smooth;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .cat-swiper::-webkit-scrollbar { display: none; }
+    .cat-list {
+      display: flex;
+      gap: var(--gap);
+      align-items: center;
+      height: var(--cat-height);
+    }
+    .cat-item {
+      padding: 8px 18px;
+      border-radius: 999px;
+      background: var(--color-accent);
+      color: var(--color-primary);
+      font-weight: 500;
+      font-size: 1em;
+      cursor: pointer;
+      border: none;
+      transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+    .cat-item.active, .cat-item:focus {
+      background: var(--color-highlight);
+      color: #fff;
+      outline: none;
+    }
+    .items-view {
+      margin-top: 8px;
+      overflow: hidden;
+    }
+    .items-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--gap);
+      overflow-y: auto;
+      max-height: 75vh;
+      padding-bottom: var(--gap);
+    }
+    .item-card {
+      background: #fafafa;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: var(--gap);
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: start;
+      gap: 9px;
+      min-width: 0;
+      min-height: 100px;
+    }
+    .item-img {
+      width: 100%;
+      height: var(--item-img-h);
+      object-fit: cover;
+      border-radius: var(--radius);
+      background: #eaeaea;
+      margin-bottom: 6px;
+      flex-shrink: 0;
+      flex-grow: 0;
+      aspect-ratio: 4 / 2;
+      max-width: 100%;
+      max-height: var(--item-img-h);
+      min-height: var(--item-img-h);
+      min-width: 0;
+      display: block;
+    }
+    .item-name {
+      font-size: 1.08em;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    .item-desc {
+      color: var(--color-secondary);
+      font-size: 0.98em;
+      margin-bottom: 4px;
+      flex: 1 1 auto;
+      min-height: 28px;
+    }
+    .item-price {
+      font-weight: 600;
+      color: var(--color-highlight);
+      font-size: 1.08em;
+      margin-top: 2px;
+      align-self: flex-start;
+    }
+    @media (max-width: 900px) {
+      .items-row { grid-template-columns: repeat(2, 1fr); }
+      .menu-container { padding: 10px; }
+    }
+    @media (max-width: 630px) {
+      .items-row { grid-template-columns: 1fr; }
+      .cat-swiper-wrapper { height: 48px; }
+    }
+    @media (max-width: 450px) {
+      .menu-container { padding: 5px; }
+      .item-card { padding: 8px; }
+      .cat-item { font-size: 0.99em; padding: 8px 11px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-container">
+    <h2 style="margin: 10px 0 18px 2px; text-align:left;">Our Menu</h2>
+    <div class="cat-swiper-wrapper">
+      <button class="cat-arrow" id="cat-left" aria-label="Scroll left">&#8592;</button>
+      <div class="cat-swiper" id="cat-swiper">
+        <div class="cat-list" id="cat-list"></div>
+      </div>
+      <button class="cat-arrow" id="cat-right" aria-label="Scroll right">&#8594;</button>
+    </div>
+    <div class="items-view">
+      <div class="items-row" id="items-row"></div>
+    </div>
+  </div>
+  <script>
+    // All categories
+    const categories = [
+      "Salads: 8",
+      "Soups: 8",
+      "Vegetable Appetizers: 13",
+      "Non‑Vegetable Appetizers: 8",
+      "Vegetable BBQ: 6",
+      "Chicken BBQ: 7",
+      "Lamb BBQ: 3",
+      "Beef BBQ: 2",
+      "Dal (lentil dishes): 5",
+      "Egg dishes: 3",
+      "Vegetarian curries (main course): 9",
+      "Paneer dishes: 5",
+      "Seafood dishes: 9",
+      "Seafood BBQ: 4",
+      "India Fusion Chicken Dishes: 2",
+      "Chicken dishes: 14",
+      "Lamb dishes: 8",
+      "Beef dishes: 6",
+      "Biryani varieties: 9",
+      "Rice dishes: 7",
+      "Fried rice: 6",
+      "Indian breads: 14",
+      "Accompaniments: 9",
+      "Desserts: 2",
+      "Drinks (non-alcoholic): 12",
+      "Wines: 8"
+    ];
+
+    // Salad items with actual data
+    const saladItems = [
+      {
+        name: "Onion Salad",
+        price: "900,00 ֏",
+        desc: "Thin slices of onion",
+        img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        name: "Tomato Cucumber Onion Salad",
+        price: "1 200,00 ֏",
+        desc: "Slices of tomatoes, cucumber, and onions",
+        img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        name: "Green Salad",
+        price: "1 600,00 ֏",
+        desc: "Slices of carrot, cucumber, tomatoes, onions",
+        img: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        name: "Kachumber Salad",
+        price: "1 700,00 ֏",
+        desc: "Onion, carrot, tomato, cucumber, chat masala, lemon juice",
+        img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        name: "India Palace Chef’s Special Salad",
+        price: "1 900,00 ֏",
+        desc: "Chopped onion, carrot, cabbage, cucumber, tomatoes, and Indian spices dressed with mayonnaise, cheese, sweet corn, and salad leaves",
+        img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        name: "Beef Salad",
+        price: "2 400,00 ֏",
+        desc: "Beef fillet with chopped onion, carrot, cabbage, cucumber, tomatoes, and Indian spices",
+        img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        name: "Chicken Tikka Salad",
+        price: "2 900,00 ֏",
+        desc: "Chicken fillet with chopped onion, carrot, cabbage, cucumber, tomatoes, and Indian spices",
+        img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        name: "Crispy Prawn Salad",
+        price: "3 200,00 ֏",
+        desc: "Fried prawns with chopped onion, carrot, cabbage, cucumber, tomatoes, and Indian spices",
+        img: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80"
+      }
+    ];
+
+    // Dummy item for other categories
+    const sampleItems = [
+      {
+        name: "Sample Dish",
+        desc: "A delicious sample prepared with authentic spices and fresh ingredients.",
+        price: "$12.00",
+        img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        name: "Tasty Delight",
+        desc: "Savory, aromatic, and perfectly cooked for your delight.",
+        price: "$10.50",
+        img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        name: "Chef's Special",
+        desc: "A chef's signature menu item that will tickle your taste buds.",
+        price: "$14.20",
+        img: "https://images.unsplash.com/photo-1543779508-1e03e1b7e8a0?auto=format&fit=crop&w=400&q=80"
+      }
+    ];
+
+    const catListDiv = document.getElementById('cat-list');
+    const itemsRowDiv = document.getElementById('items-row');
+    const catSwiper = document.getElementById('cat-swiper');
+    const leftBtn = document.getElementById('cat-left');
+    const rightBtn = document.getElementById('cat-right');
+    // Auto-select "Salads" as default
+    let currentCatIdx = categories.findIndex(c => c.startsWith("Salads"));
+
+    function renderCategories() {
+      catListDiv.innerHTML = '';
+      categories.forEach((cat, idx) => {
+        const btn = document.createElement('button');
+        btn.className = 'cat-item' + (idx === currentCatIdx ? ' active' : '');
+        btn.textContent = cat;
+        btn.tabIndex = 0;
+        btn.addEventListener('click', () => selectCategory(idx, true));
+        catListDiv.appendChild(btn);
+      });
+    }
+
+    function renderItems() {
+      itemsRowDiv.innerHTML = '';
+      let items;
+      // Show real salad items if "Salads" is selected
+      if(currentCatIdx === categories.findIndex(c => c.startsWith("Salads"))) {
+        items = saladItems;
+      } else {
+        items = sampleItems;
+      }
+      items.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'item-card';
+        card.innerHTML = `
+          <img class="item-img" src="${item.img}" alt="${item.name}" loading="lazy">
+          <div class="item-name">${item.name}</div>
+          <div class="item-desc">${item.desc}</div>
+          <div class="item-price">${item.price}</div>
+        `;
+        itemsRowDiv.appendChild(card);
+      });
+    }
+
+    function selectCategory(idx, scrollTo) {
+      currentCatIdx = idx;
+      renderCategories();
+      renderItems();
+      const btns = catListDiv.querySelectorAll('.cat-item');
+      if (scrollTo && btns[idx]) {
+        btns[idx].scrollIntoView({behavior: 'smooth', inline: 'center', block: 'nearest'});
+      }
+    }
+
+    leftBtn.addEventListener('click', () => {
+      catSwiper.scrollBy({left: -160, behavior: 'smooth'});
+    });
+    rightBtn.addEventListener('click', () => {
+      catSwiper.scrollBy({left: 160, behavior: 'smooth'});
+    });
+
+    catListDiv.addEventListener('keydown', e => {
+      if (e.target.classList.contains('cat-item')) {
+        let idx = Array.from(catListDiv.children).indexOf(e.target);
+        if (e.key === 'ArrowRight' && idx < categories.length - 1) {
+          selectCategory(idx + 1, true);
+          catListDiv.children[idx + 1].focus();
+        }
+        if (e.key === 'ArrowLeft' && idx > 0) {
+          selectCategory(idx - 1, true);
+          catListDiv.children[idx - 1].focus();
+        }
+      }
+    });
+
+    function updateArrows() {
+      const maxScroll = catSwiper.scrollWidth - catSwiper.clientWidth;
+      leftBtn.disabled = catSwiper.scrollLeft < 2;
+      rightBtn.disabled = catSwiper.scrollLeft > maxScroll - 2;
+    }
+    catSwiper.addEventListener('scroll', updateArrows);
+    window.addEventListener('resize', updateArrows);
+
+    // Initial render
+    renderCategories();
+    renderItems();
+    setTimeout(() => {
+      updateArrows();
+      // Auto-scroll to the selected category on load
+      const btns = catListDiv.querySelectorAll('.cat-item');
+      if (btns[currentCatIdx]) {
+        btns[currentCatIdx].scrollIntoView({behavior: 'smooth', inline: 'center', block: 'nearest'});
+      }
+    }, 120);
+  </script>
+</body>
+</html>
