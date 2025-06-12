@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Full Menu Page</title>
+  <!-- Add this inside the <head> section -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     :root {
@@ -17,7 +19,22 @@
       --radius: 14px;
       --shadow: 0 2px 8px rgba(0,0,0,0.06);
     }
-    body {
+    body
+    .home-icon {
+  position: fixed;
+  top: 20px;
+  right: 110px;
+  color: #ec922a;
+  font-size: 2.2rem;
+  z-index: 9999;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+.home-icon:hover {
+  transform: scale(1.25);
+  color: #ec922a; /* Ensures color stays the same on hover */
+}
+    {
       margin: 0;
       font-family: 'Segoe UI', Arial, sans-serif;
       background: var(--color-bg);
@@ -161,6 +178,10 @@
   </style>
 </head>
 <body>
+  <!-- Home Icon Button Top Right -->
+<a href="https://indiapalacearmenia.com/" class="home-icon" title="Home">
+  <i class="fas fa-home"></i>
+</a>
   <div class="menu-container">
     <h2 style="margin: 10px 0 18px 2px; text-align:left;">Our Menu</h2>
     <div class="cat-swiper-wrapper">
